@@ -36,6 +36,18 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
+.clock-title {
+    font-size: 48px;
+    font-weight: 300;
+    color: #fff;
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
 @keyframes float {
 
     0%,
@@ -60,17 +72,11 @@ body {
 
 li {
     list-style: none;
-    font-size: 80px;
-    font-weight: 300;
-    color: #fff;
-    text-shadow:
-        0 0 20px rgba(255, 255, 255, 0.5),
-        0 4px 8px rgba(0, 0, 0, 0.3);
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 20px 30px;
-    min-width: 120px;
+    min-width: 150px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow:
@@ -79,6 +85,31 @@ li {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.time-unit span {
+    font-size: 80px;
+    font-weight: 300;
+    color: #fff;
+    text-shadow:
+        0 0 20px rgba(255, 255, 255, 0.5),
+        0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.label {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: none !important;
 }
 
 li::before {
