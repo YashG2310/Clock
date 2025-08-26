@@ -159,7 +159,8 @@ li:hover {
 }
 
 /* Add subtle separators */
-.clock li:not(:last-child)::after {
+.clock li:nth-child(1)::after,
+.clock li:nth-child(2)::after {
     content: ':';
     position: absolute;
     right: -25px;
@@ -182,6 +183,30 @@ li:hover {
     100% {
         opacity: 0.3;
     }
+}
+
+/* Style for the AM/PM indicator */
+.clock li:nth-child(4) {
+    min-width: 80px; /* smaller width */
+}
+
+#ampm {
+    font-size: 40px !important; /* smaller font size */
+    font-weight: 400 !important;
+}
+
+/* Date container */
+.date-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#date {
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
 
 /* Responsive design */
